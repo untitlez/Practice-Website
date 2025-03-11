@@ -1,6 +1,6 @@
 "use client";
 
-import PostImages from "@/app/components/pokemon/PostImages";
+import PostImages from "@/app/components/instagram/PostImages";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 export default function PokemonPage() {

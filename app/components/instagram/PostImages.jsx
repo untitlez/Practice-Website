@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import InfiniteScroll from "react-infinite-scroll-component";
 
@@ -38,7 +37,7 @@ export default function PostImages() {
       dataLength={data.pages.flatMap((page) => page.results).length}
       next={fetchNextPage}
       hasMore={hasNextPage ?? false}
-      loader={<img className="skeleton h-full w-full aspect-square object-cover rounded-md"/>}
+      loader={<span className="loading loading-spinner loading-xl m-32"></span>}
     >
       {data.pages.flatMap((page) =>
         page.results.map((post) => (
